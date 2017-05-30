@@ -33,6 +33,19 @@
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="css/cardio.css">
 	<style>
+	 .google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
 	input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -647,7 +660,11 @@ div.form {
 	<footer>
 		<div class="container">
 			<div class="row">
-				
+				<div class="col-sm-6 text-center-mobile">
+				<div class="google-maps">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.508575886982!2d87.28754511460298!3d23.550171184688445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f772081cede5e9%3A0x33fb9ccb243dfa5!2sNational+Institute+of+Technology!5e0!3m2!1sen!2sin!4v1494654405132" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				</div>
 				<div class="col-sm-6 text-center-mobile">
 					<h3 class="white"> <span class="open-blink"></span></h3>
 					<div class="row opening-hours">
