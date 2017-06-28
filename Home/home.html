@@ -36,6 +36,20 @@
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="css/cardio.css">
 	<style>
+	textarea.input-field{
+	width: 100%;
+	box-sizing:border-box;
+	}
+	span{
+	display: block;
+	overflow: hidden;
+	}
+	div.frm{
+	background-color: white;
+	}
+	div.frm:hover{
+	background-color: #a9c9fc;
+	}
 	a.doc
 	{
 		color: white;
@@ -521,7 +535,8 @@ div.form {
 	</section>
 	<div class="form">
 	<section id="register" class="single-page scrollblock">
-      <div class="container">
+      <div class="frm">
+	  <div class="container">
         <h1 align='center'><font face="helvetica">Register as a Delegate</font></h1>
         <div class="row">
           <div class="span12">
@@ -595,7 +610,7 @@ div.form {
   </div>
     <legend>MUN Experience </legend>
   <div class="form-group col-lg-12">
-                               <textarea type="text" name="munex" placeholder="Something about your past MUNs" class="input-field" class="form-control" rows="6"></textarea>
+                               <span><textarea type="text" name="munex" placeholder="Something about your past MUNs" class="input-field" class="form-control" rows="6"></textarea></span>
                             </div>
     
 
@@ -609,6 +624,10 @@ div.form {
           </div>
           <!-- ./span12 -->
         </div>
+		</div>
+		</div>
+		<div class="frm">
+		<div class="container">
          <h1 align='center'><font face="helvetica">Register as a member of International Press</font></h1>
         <div class="row">
           <div class="span12">
@@ -674,7 +693,7 @@ div.form {
    <legend>MUN Experience </legend>
   <div class="form-group col-lg-12">
                                 
-                                <textarea type="text" name="munex" placeholder="Something about your past MUNs" class="input-field" class="form-control" rows="6"></textarea>
+                                <span><textarea type="text" name="munex" placeholder="Something about your past MUNs" class="input-field" class="form-control" rows="6"></textarea></span>
                             </div>
    <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
@@ -686,6 +705,7 @@ div.form {
           </div>
           <!-- ./span12 -->
         </div>
+		</div>
         <!--/.row -->
       </div>
       <!-- /.container -->
@@ -723,7 +743,7 @@ div.form {
 				</div>
 				</div>
 				<div class="col-sm-6 text-center-mobile">
-					<h3 class="white"> <span class="open-blink"></span></h3>
+					<h3 class="white"> </h3>
 					<div class="row opening-hours">
 						<div class="col-sm-6 text-center-mobile">
 							<h5 class="light-white light"><p class="padding2"><font color="white" size=3px><div class="col-lg-12">
