@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NITMUN</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="nit dgp, nitmun, mun" />
+	<meta name="author" content="" />
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="img/favicons/manifest.json">
+	<link rel="shortcut icon" href="img/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#00a8ff">
+	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Normalize -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="css/owl.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+	<!-- Main style -->
+	<link rel="stylesheet" type="text/css" href="css/cardio.css">
+	<style>
+	textarea.input-field{
+	width: 100%;
+	box-sizing:border-box;
+	}
+	span{
+	display: block;
+	overflow: hidden;
+	}
+	div.frm{
+	background-color: white;
+	}
+	div.frm:hover{
+	background-color: #a9c9fc;
+	}
+	a.doc
+	{
+		color: white;
+	}
+	a.doc:hover
+	{
+		color: red;
+	}
+	a.con
+	{
+		color: white;
+	}
+	a.con:hover
+	{
+		color: #27AE60;
+	}
+	.button {
+    background-color: #1F618D;
+    border: none;
+    color: Black;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 1px 1px;
+    cursor: pointer;
+}
+	.bg {
+    background-image: url('./img/whitehouse.jpg');
+}
+.bg2 {
+    background-image: url('./img/space.jpg');
+}
+	div.box {
+width: 100%;
+}
+	 .google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+	input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #00ccff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #0066cc;
+}
+
+div.form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+	p.padding {
+    padding-left: 0.4cm;
+	}
+	p.padding2 {
+    padding-left: 4cm;
+	}
+	legend.pad {
+    padding-left: 0.4cm;
+	}
+	</style>
+	
+	<script type="text/javascript">
+    function validate()
+    {
+        var x=document.forms["signup"]["name1"].value
+        if (x==null || x=="")
+        {
+          alert("Name should not be empty");
+          return false;
+        }
+        else
+        {
+         var letters = /^[A-Za-z ]+$/;  
+         if(!x.match(letters))  
+         {  
+          alert('Name must contain letters only.');  
+          return false;  
+         }  
+         if(x.length<=2)
+         {
+          alert("Name should contain atleast 3 letters.");
+          return false;
+         }
+        }
+       
+     var x=document.forms["signup"]["institute1"].value
+       if (x==null || x=="")
+       {
+        alert('Enter your Institute.');
+        return false;
+       }
+       else
+       {
+         var letters = /^[A-Za-z ]+$/;  
+         if(!x.match(letters))  
+         {  
+          alert('College must contain letters only.');  
+          return false;  
+         }  
+         if(x.length<=2)
+         {
+          alert("College must contain atleast 3 letters.");
+          return false;
+         }
+       }
+     var x=document.forms["signup"]["city1"].value
+       if (x==null || x=="")
+       {
+        alert("Enter your City.");
+        return false;
+       }
+       else
+       {
+        var letters = /^[A-Za-z ]+$/;  
+        if(!x.match(letters))  
+        {  
+         alert('City must contain letters only.');  
+         return false;  
+        }  
+        if(x.length<=2)
+        {
+          alert("City must contain atleast 3 letters.");
+          return false;
+        }
+       }
+     
+       var x=document.forms["signup"]["contact1"].value
+       if (x==null || x=="" || x.length!=10)
+       {
+        alert("Contact must be valid that should be of 14 digits.");
+        return false;
+       }
+     else
+     {
+     var digits =/^(\+91-|\+91|0)?\d{10}$/;
+     if(!x.match(digits))
+     {
+      alert("Please match the requested format of contact");
+    return false;
+     }
+     }
+     
+       var x=document.forms["signup"]["email1"].value
+       var atpos=x.indexOf("@");
+       var dotpos=x.lastIndexOf(".");
+       var letters = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+       if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+       {
+        alert("Not a valid e-mail address");
+        return false;
+       }
+       else if(!x.test(letters))
+       {
+        alert("Not a valid e-mail address");
+        return false;
+       }
+     var y=document.forms["signup"]["councilpref1"].value
+     alert(y);
+       
+       
+   }
+   function validateip()
+   {
+   
+        var x=document.forms["ip"]["name2"].value
+        if (x==null || x=="")
+        {
+          alert("Name should not be empty");
+          return false;
+        }
+        else
+        {
+         var letters = /^[A-Za-z ]+$/;  
+         if(!x.match(letters))  
+         {  
+          alert('Name must contain letters only.');  
+          return false;  
+         }  
+         if(x.length<=2)
+         {
+          alert("First name should contain atleast 3 letters.");
+          return false;
+         }
+        }
+       
+     var x=document.forms["ip"]["institute2"].value
+       if (x==null || x=="")
+       {
+        alert('Enter your Institute.');
+        return false;
+       }
+       else
+       {
+         var letters = /^[A-Za-z ]+$/;  
+         if(!x.match(letters))  
+         {  
+          alert('College must contain letters only.');  
+          return false;  
+         }  
+         if(x.length<=2)
+         {
+          alert("College must contain atleast 3 letters.");
+          return false;
+         }
+       }
+     var x=document.forms["ip"]["city2"].value
+       if (x==null || x=="")
+       {
+        alert("Enter your City.");
+        return false;
+       }
+       else
+       {
+        var letters = /^[A-Za-z ]+$/;  
+        if(!x.match(letters))  
+        {  
+         alert('City must contain letters only.');  
+         return false;  
+        }  
+        if(x.length<=2)
+        {
+          alert("City must contain atleast 3 letters.");
+          return false;
+        }
+       }
+     
+       var x=document.forms["ip"]["contact2"].value
+       if (x==null || x=="" || x.length!=10)
+       {
+        alert("Contact1 must be valid that should be of 10 digits.");
+        return false;
+       }
+     else
+     {
+     var digits =/^(\+91-|\+91|0)?\d{10}$/;
+     if(!x.match(digits))
+     {
+      alert("Please match the requested format of contact");
+    return false;
+     }
+     }
+     
+       var x=document.forms["ip"]["email2"].value
+       var atpos=x.indexOf("@");
+       var dotpos=x.lastIndexOf(".");
+       var letters = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+       if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+       {
+        alert("Not a valid e-mail address");
+        return false;
+       }
+       else if(!x.test(letters))
+       {
+        alert("Not a valid e-mail address");
+        return false;
+       }
+   }
+   </script>  
+</head>
+
+<body>
+	<div class="preloader">
+		<img src="img/loader.gif" alt="Preloader image">
+	</div>
+	<nav class="navbar">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/logo33B.png" data-active-url="img/logo33A.png" alt=""></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right main-nav">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#councils">Councils</a></li>
+					<li><a href="#secretariat">Secretariat</a></li>
+					<li><a href="#register">Register</a></li>
+					<li><a href="http://www.lcnitd.com">Meet The Team</a></li>
+					<li><a href="#contact">Contact Us</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<header id="home">
+		<div class="container">
+			<div class="table">
+				<div class="header-text">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h3 class="light white">The wait is over.</h3>
+							<h1 class="white typed">This is not a resolution. <br><br> This is a <br><br> REVOLUTION</h1>
+							<span class="typed-cursor">|</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="cut cut-top"></div>
+		<div class="container">
+			<div class="row intro-tables">
+				<div class="col-md-4">
+					<div class="intro-table intro-table-first">
+						<h5 class="white heading">National Institute Of Technology, Durgapur</h5>
+						<div class="owl-carousel owl-schedule bottom">
+							<div class="item">
+								<div class="schedule-row row">
+									<div class="entry-content">
+                <p><font color="white">"Work maketh a man" - the motto of the college National Institute of Technology, Durgapur speaks what it stands for. A public engineering college deemed as an Institute of National Importance by the Indian Government, it strives to be among the top NITs in the country.</font></p>
+                 </div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="intro-table intro-table-hover">
+						<h5 class="white heading hide-hover">Model United Nations (MUN)</h5>
+						<div class="entry-content">
+							<p class="padding"><font color="white">In MUN, students step into the shoes of ambassadors from U.N. member states to debate current issues on the organization's vast agenda. Student "delegates" in MUN prepare draft resolutions, plot strategy, negotiate with supporters and adversaries and resolve conflicts.</font></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="intro-table intro-table-third">
+						<h5 class="white heading">Our Objective Towards MUN</h5>
+						<div class="owl-testimonials bottom">
+							<div class="item">
+								<p class="padding"><font size="3.5px" color="white">The Literary Circle's vision towards hosting MUN is to provide the students with a platform to test their communication skills and to improve upon them while getting exposed to the diplomatic ways of delegates.Moreover, it generates awareness regarding various global issues, their effects and the countermeasures required.</font></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</section>
+	<section id="councils" class="section section-padded">
+		<div class="container">
+			<div class="row text-center title">
+				<h2>Councils</h2>
+				<h4 class="light muted"></h4>
+			</div>
+			<div class="row services">
+				<div class="col-md-6">
+				<div class="bg">
+					<div class="service">
+						<div class="icon-holder">
+							<img src="img/icons/whitehouse.png" alt="" class="icon">
+						</div>
+						<h6 class="heading"><font color="white">The White House Crisis Cabinet</font></h6>
+						<p class="description"><font color="white" size=2px>Agenda: Defusing the Presidential Time Bomb (Mitigation of All Imminent Crises)</font><br>
+						<button type="button" class="button"><a class="doc" href="The White House Crisis Cabinet Study Guide.pdf">Study Guide</a></button>
+						<button type="button" class="button"><a class="doc" href="The White House Crisis Cabinet Portfolio Matrix.pdf">Cabinet Portfolio Matrix</a></button></p>
+					</div>
+				</div>
+				</div>
+				<div class="col-md-6">
+				<div class="bg2">
+					<div class="service">
+						<div class="icon-holder">
+							<img src="img/icons/space.png" alt="" class="icon">
+						</div>
+						<h6 class="heading"><font color="white">Council on the Peaceful Uses of Outer Space (COPUOS) under United Nations Office for Outer Space Affairs(UNOOSA)</font></h6>
+						<p class="description"><font color="white" size=2px>Agenda: Independent fair use of space by non government entities for private enterprise and territorialisation of outer space for evolution of mankind.</font><br>
+						<button type="button" class="button"><a class="doc" href="COPUOS.pdf">Study Guide</a></button>
+						<button type="button" class="button"><a class="doc" href="country_matrix.pdf">Country Matrix</a></button></p>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="cut cut-bottom"></div>
+	</section>
+	<section id="secretariat" class="section gray-bg">
+		<div class="container">
+			<div class="row title text-center">
+				<h2 class="margin-top">Secretariat</h2>
+				<h4 class="light muted"></h4>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="team text-center">
+						<div class="cover" style="background:url('img/team/cover.jpg'); background-size:cover;">
+							<div class="overlay text-center">
+								<h4 class="white"><a class="con" href="tel:+919433338604"><i class="fa fa-phone"></i></a><br>+91-9433338604</h4>
+								<h5 class="light light-white"></h5>
+							</div>
+						</div>
+						<img src="img/team/team1.jpg" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Sumedha Sarkar</h4>
+							<h5 class="muted regular">Secretary General</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="team text-center">
+						<div class="cover" style="background:url('img/team/cover.jpg'); background-size:cover;">
+							<div class="overlay text-center">
+								<h4 class="white"><a class="con" href="tel:+919831545642"><i class="fa fa-phone"></i></a><br>+91-9831545642</h4>
+								<h5 class="light light-white"></h5>
+							</div>
+						</div>
+						<img src="img/team/team2.jpg" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Anushka Ghosh</h4>
+							<h5 class="muted regular">Under Secretary General</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="team text-center">
+						<div class="cover" style="background:url('img/team/cover.jpg'); background-size:cover;">
+							<div class="overlay text-center">
+								<h4 class="white"><a class="con" href="tel:+919088946573"><i class="fa fa-phone"></i></a><br>+91-9088946573</h4>
+								<h5 class="light light-white"></h5>
+							</div>
+						</div>
+						<img src="img/team/team3.jpg" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Kashyap Mattoo</h4>
+							<h5 class="muted regular">Under Secretary General</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="team text-center">
+						<div class="cover" style="background:url('img/team/cover.jpg'); background-size:cover;">
+							<div class="overlay text-center">
+								<h4 class="white"><a class="con" href="tel:+919874134390"><i class="fa fa-phone"></i></a><br>+91-9874134390</h4>
+								<h5 class="light light-white"></h5>
+							</div>
+						</div>
+						<img src="img/team/team4.jpg" alt="Team Image" class="avatar">
+						<div class="title">
+							<h4>Dyuti Mandal</h4>
+							<h5 class="muted regular">International Press Head</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="form">
+	<section id="register" class="single-page scrollblock">
+      <div class="frm">
+	  <div class="container">
+        <h1 align='center'><font face="helvetica">Register as a Delegate</font></h1>
+        <div class="row">
+          <div class="span12">
+            <div class="cform" id="theme-form">
+              <form name="regdel" method="post" action="regdel.php" role="form" id="signup" onsubmit="return validate();">
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                <label>Name</label>
+                                <input type="text" name="name1" class="form-control" placeholder='Write full name here' required>
+                            </div>
+              
+              <div class="form-group col-lg-4">
+                                <label>College/University</label>
+                                <input type="text" name="institute1" class="form-control" placeholder='Institute name' >
+                            </div>
+              <div class="form-group col-lg-4">
+                                <label>City</label>
+                                <input type="text" name="city1" class="form-control" placeholder='City of residence' >
+                            </div>
+              
+			  <div class="form-group col-lg-4">
+                                <label>Contact Number</label>
+                                <input type="tel" name="contact1" class="form-control" placeholder='90000000000' required>
+                            </div>
+              
+              <div class="form-group col-lg-4">
+                                <label>Email Address</label>
+                                <input type="email" name="email1"  class="form-control" placeholder='example@xyz.com' class='input-field' required>
+                            </div>
+<legend class="pad">Council Choice 1st Preference</legend>
+                            <div class="form-group col-lg-3">
+              <label >Council Choice 1st Preference</label>
+    <select class='input-field' name="councilpref1"  class="form-control" id="councilpref1">
+      <option value="TWHCC" selected='selected'>The White House Crisis Cabinet</option>
+      
+      <option value="COPOUS">COPUOS under UNOOSA</option>
+    </select>
+  </div>
+  <div class="form-group col-lg-3">
+    <label id="a1">Country/Private Company/Cabinet Portfolio Preference #1</label>
+    <input type='text' name="country1" placeholder='Preference #1' class='input-field'  class="form-control" required>
+  </div>
+<div class="form-group col-lg-3">
+    <label id="a2">Country/Private Company/Cabinet Portfolio Preference #2</label>
+    <input type='text' name="country2"  placeholder='Preference #2' class='input-field'  class="form-control" required/>
+  </div>
+  <div class="form-group col-lg-3">
+    <label id="a3">Country/Private Company/Cabinet Portfolio Preference #3</label>
+    <input type='text' name="country3" placeholder='Preference #3' class='input-field'  class="form-control" required/>
+  </div>
+  <legend class="pad" >Council Choice 2nd Preference</legend>
+                            <div class="form-group col-lg-3">
+              <label >Council Choice 2nd Preference</label>
+    <select class='input-field' name='councilpref2'  class="form-control">
+      <option value='TWHCC' selected='selected'>The White House Crisis Cabinet</option>
+      
+      <option value='COPOUS' >COPUOS under UNOOSA</option>
+    </select>
+  </div>
+  <div class="form-group col-lg-3">
+    <label>Country/Private Company/Cabinet Portfolio Preference #1</label>
+    <input type='text' name='c1'   placeholder='Preference #1' class='input-field'  class="form-control" required/>
+  </div>
+<div class="form-group col-lg-3">
+    <label>Country/Private Company/Cabinet Portfolio Preference #2</label>
+    <input type='text' name='c2'  placeholder='Preference #2' class='input-field'  class="form-control" required/>
+  </div>
+  <div class="form-group col-lg-3">
+    <label>Country/Private Company/Cabinet Portfolio Preference #3</label>
+    <input type='text' name='c3' placeholder='Preference #3' class='input-field'  class="form-control" required/>
+  </div>
+    <legend class="pad">MUN Experience </legend>
+  <div class="form-group col-lg-12">
+                               <span><textarea type="text" name="munex" placeholder="Something about your past MUNs" class="input-field" class="form-control" rows="6"></textarea></span>
+                            </div>
+    
+
+   <div class="form-group col-lg-12">
+                                <input type="hidden" name="save" value="contact">
+                                <input type="submit" name="submit" value="submit">
+                            </div>
+                        </div>
+                    </form>
+            </div>
+          </div>
+          <!-- ./span12 -->
+        </div>
+		</div>
+		</div>
+		<div class="frm">
+		<div class="container">
+         <h1 align='center'><font face="helvetica">Register as a member of International Press</font></h1>
+        <div class="row">
+          <div class="span12">
+            <div class="cform" id="theme-form">
+              <form name="regpress" method="post" action="regpress.php" role="form" id="ip" onsubmit="return validateip();" >
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                <label>Name</label>
+                                <input type="text" name="name2" class="form-control" placeholder='Write full name here' required>
+                            </div>
+                            
+                            <div class="form-group col-lg-4">
+                                <label>College/University</label>
+                                <input type="text" name="institute2" class="form-control" placeholder='Institute name' required>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>City</label>
+                                <input type="text" name="city2" class="form-control" placeholder='City' required>
+                            </div>
+                            
+                            <div class="form-group col-lg-4">
+                                <label>Contact Number</label>
+                                <input type="tel" name="contact2" class="form-control" placeholder='90000000000' required>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Email Address</label>
+                                <input type="email1" name="email2" class="form-control" placeholder='example@xyz.com' class='input-field' required>
+                            </div>
+<legend class="pad">Agency Choice 1st Preference</legend>
+                            <div class="form-group col-lg-6">
+                            <label >Agency Choice 1st Preference</label>
+        <select class='input-field' name='agencypref1'  class="form-control">
+            <option value='aljazeera' selected='selected'>Al Jazeera</option>
+            <option value='bbc' >BBC</option>
+            <option value='reuters' >Reuters</option>
+        </select>
+    </div>
+                             <div class="form-group col-lg-6">
+                            <label >Role Preference</label>
+        <select class='input-field' name='agencyrolepref1'  class="form-control">
+            <option value='photographer' selected='selected'>Photographer</option>
+            <option value='journalist' >Journalist</option>
+        </select>
+    </div>
+    
+    <legend class="pad">Agency Choice 2nd Preference</legend>
+                            <div class="form-group col-lg-6">
+                            <label >Agency Choice 2nd Preference</label>
+        <select class='input-field' name='agencypref2'  class="form-control">
+            <option value='aljazeera' selected='selected'>Al Jazeera</option>
+            <option value='bbc' >BBC</option>
+            <option value='reuters' >Reuters</option>
+        </select>
+    </div>
+                             <div class="form-group col-lg-6">
+                            <label >Role Preference</label>
+        <select class='input-field' name='agencyrolepref2'  class="form-control">
+            <option value='photographer' selected='selected'>Photographer</option>
+            <option value='journalist' >Journalist</option>
+        </select>
+    </div>
+    </div>
+   <legend>MUN Experience </legend>
+  <div class="form-group col-lg-12">
+                                
+                                <span><textarea type="text" name="munex" placeholder="Something about your past MUNs" class="input-field" class="form-control" rows="6"></textarea></span>
+                            </div>
+   <div class="form-group col-lg-12">
+                                <input type="hidden" name="save" value="contact">
+                                <input type="submit" name="submit" value="submit">
+                            </div>
+                        </div>
+                    </form>
+            </div>
+          </div>
+          <!-- ./span12 -->
+        </div>
+		</div>
+        <!--/.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+	</div>
+	<section id="contact" class="section section-padded blue-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="owl-twitter owl-carousel">
+						<div class="item text-center">
+							<img src="./img/Capture.png" align='center'/>
+							<h4 class="white light"><b>Want to know more?</b>| A little about us.</h4>
+						</div>
+						<div class="item text-center">
+							<img src="./img/Capture.png" align='center'/>
+							<h4 class="white light"><a href="about.html"><font color="red">The Literary Circle</font></a> is the exclusive literary club of the college.</h4>
+						</div>
+						<div class="item text-center">
+							<img src="./img/Capture.png" align='center'/>
+							<h4 class="white light">Our motto is to think out of the box and think sky high.</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 text-center-mobile">
+				<div class="google-maps">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.508575886982!2d87.28754511460298!3d23.550171184688445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f772081cede5e9%3A0x33fb9ccb243dfa5!2sNational+Institute+of+Technology!5e0!3m2!1sen!2sin!4v1494654405132" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				</div>
+				<div class="col-sm-6 text-center-mobile">
+					<h3 class="white"> </h3>
+					<div class="row opening-hours">
+						<div class="col-sm-6 text-center-mobile">
+							<h5 class="light-white light"><p class="padding2"><font color="white" size=3px><div class="col-lg-12">
+			<div class="widget-contact">
+				<h5>Our Headquarters!</h5>
+				
+				<address>
+				  <strong>National Institute of Technology, Durgapur</strong><br>
+				    Mahatma Gandhi Rd, A-Zone<br> 
+                    Durgapur, West Bengal 713209<br>
+                    India<br>
+					<ul class="social-footer">
+						<li><a class="con" href="tel:8978837523"><div title="8978837523"><i class="fa fa-phone"></i></div></a></li>
+						<li><a class="con" href="mailto:verve.nitmun@gmail.com"><div title="verve.nitmun@gmail.com"<i class="fa fa-envelope"></i></div></a></li>
+						<li><a class="con" href="https://www.facebook.com/NITMUN17/"><div title="Literary Circle, NIT Durgapur"><i class="fa fa-facebook"></i></div></a></li>						
+					</ul>
+</font></div></p></h5>
+							<h3 class="regular white"></h3>
+						</div>
+						<div class="col-sm-6 text-center-mobile">
+							<h5 class="light-white light"></h5>
+							<h3 class="regular white"></h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row bottom-footer text-center-mobile">
+				<div class="col-sm-8">
+				</div>
+				<div class="col-sm-4 text-right text-center-mobile">
+					
+				</div>
+			</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Holder for mobile navigation -->
+	<div class="mobile-nav">
+		<ul>
+		</ul>
+		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+	</div>
+	<!-- Scripts -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/typewriter.js"></script>
+	<script src="js/jquery.onepagenav.js"></script>
+	<script src="js/main.js"></script>
+	
+</body>
+
+</html>
