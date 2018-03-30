@@ -32,12 +32,12 @@
 				<div class="container">
 					<div class="navbar-header page-scroll">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-							<span class="sr-only">VERVE XIV</span>
+							<span class="sr-only"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<h1><a class="navbar-brand" href="index.html">VERVE <span>XIV</span></a></h1>
+						<h1><a class="navbar-brand">VERVE <span>XIV <div id='sound_button' onClick="playpause()" ><img title='Music Playing' alt='Play The Music' src='play.png' /></div></span></a></h1>
 					</div> 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -795,5 +795,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.js"></script>
+	<script type="text/javascript">
+// Background Sound Play/Pause Script:
+// Description: Background Music Will Be On Via Click And And Will Be Off On Other Click With Image Change Also By Pure JavaScript.
+// Copyright EXEIdeas International 2013. All Right Reserved.
+function playpause() { var snd = document.getElementById("sound"); var snd_btn = document.getElementById("sound_button"); snd.muted = !snd.muted; if(snd.muted){ snd_btn.innerHTML = "<img alt='Pause The Music' title='Music Paused' src='pause.png' />"; } else{ snd_btn.innerHTML = "<img alt='Play The Music' title='Music Playing' src='play.png' />"; } }
+</script>
+<audio autoplay="true" loop="true" width="0" height="0" id="sound" src="faded.mp3" type="audio/mp3" ></audio>
+<noembed><bgsound src="music.mp3" loop="infinite"/></noembed>
 </body>
 </html>
