@@ -1,11 +1,7 @@
-.navbar
-{
-	height: 20px;
-}
 .navbar-inverse
 {
 	background-color: #1dc4b2;
-	font-size: 15px;
+	opacity: 0.9;
 }
 .navbar-inverse .navbar-nav > li > a
 {
@@ -22,10 +18,6 @@
 .navbar-inverse .navbar-brand
 {
 	color: white;
-}
-body
-{
-	padding-top: 0px;
 }
 .caption
 {
