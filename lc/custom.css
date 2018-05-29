@@ -1,3 +1,11 @@
+body
+{
+	padding-top: 70px;
+}
+html
+{
+	height: 100%;
+}
 .navbar-inverse
 {
 	background-color: #1dc4b2;
@@ -27,7 +35,7 @@
 }
 .counter h2
 {
-	font-size: 30px;
+	font-size: 22px;
 	font-weight: 500;
 }
 h1
@@ -37,10 +45,10 @@ h1
 }
 hr
 {
-	width: 400px;
+	width: 350px;
 	border-bottom: 1px solid black;
 }
 p
 {
-	font-size: 30px;
+	font-size: 22px;
 }
