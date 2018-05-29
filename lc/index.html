@@ -84,7 +84,8 @@
               <h1>NITMUN '18</h1>
             </div>
             <div class="counter" id="countdown">
-              <h2>Coming Up In <br><span class="days timenumbers">00 </span>&nbsp;days <span class="hours timenumbers">00 </span>h <span class="minutes timenumbers">00 </span>m <span class="seconds timenumbers yellow-text">00 </span>s</h2>
+              <p class="name"></p>
+              <h2><p class="name"></p>We Are Coming Up In <br><span class="days timenumbers">00 </span>&nbsp;days <span class="hours timenumbers">00 </span>h <span class="minutes timenumbers">00 </span>m <span class="seconds timenumbers yellow-text">00 </span>s</h2>
               <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                   <p class="caption">DRAFT. STRATEGISE. NEGOTIATE. RESOLVE.</p>
@@ -93,6 +94,7 @@
             </div>
             <hr>
          	<div class="btn btn-default btn-lg"><i class="fa fa-paw"></i> ENTER</div>
+          <div class="btn btn-default btn-lg"><i class="fa fa-paw"></i> I'm Feeling Lucky</div>
           </div>
         </div>
       </section>
@@ -106,5 +108,21 @@
     <script src="assets/lib/owl.carousel/dist/owl.carousel.js"></script>
     <script src="assets/lib/ajaxchimp/jquery.ajaxchimp.js"></script>
     <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+      window.onload=function()
+      {
+        if (! localStorage.checkFirstVisit) {
+    // show the element
+    // and do the animation you want
+    localStorage.name=prompt("Welcome to NITMUN '18. We have got some easter eggs for you. Please enter your name!");
+    // alert("Click on \"I'm Feeling Lucky\" to know more or \"Enter\" to go to the website!")''
+
+    // check this flag for escaping this if block next time
+    localStorage.checkFirstVisit = true;
+  }
+  var pp=document.querySelector(".name");
+  pp.innerText="Hi "+localStorage.name+"!";
+      }
+    </script>
   </body>
 </html>
