@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>NITMUN'18</title>
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style type="text/css">
+    	.w3-animate-bottom
+    	{
+    		animation: animatebottom 1s;
+    	}
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- favicon -->
     <link href="favicon.png" rel=icon>
@@ -298,12 +305,12 @@
                         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                         <li class="hidden"><a href="#page-top"></a></li>
                         <li><a class="page-scroll" href="#home">Home</a></li>
-                        <li><a class="page-scroll" href="#secretariat">Secretariat</a></li>
-                        <li><a class="page-scroll" href="#committees">Committees</a></li>
-                        <li><a class="page-scroll" href="#register">Register</a></li>
-                        <li><a class="page-scroll" href="#schedule">Schedule</a></li>
-                        <li><a class="page-scroll" href="#sponsors">Sponsors</a></li>
-                        <li><a class="page-scroll" href="#contact">Contact Us</a></li>
+                        <li><a href="#secretariat">Secretariat</a></li>
+                        <li><a href="#committees">Committees</a></li>
+                        <li><a href="#register">Register</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#sponsors">Sponsors</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -316,11 +323,13 @@
     </header>
 
     <div id="home" class="jumbotron text-center">
-        <div class="content">
+        <div id="testt" class="w3-animate-bottom" style="padding-top: 50%;">
+        	<div class="content">
             <div class="event-date">Dates</div>
             <h1>NITMUN '18</h1>
             <p class="lead" id="animate"></p>
             <a class="page-scroll" href="#register"><button type="button" class="btn btn-default btn-lg">Register</button></a>
+        </div>
         </div>
     </div>
     <!-- .Jumbotron-->
@@ -851,6 +860,50 @@
 
 <!--<script src="js/one-page-nav.js"></script>-->
 <script src="js/scripts.js"></script>
+<script type="text/javascript">
+	$("li:nth-of-type(2)").click(function(){
+    $("#home").removeClass("w3-animate-bottom");
+    setTimeout(function(){
+        $("#home").addClass("w3-animate-bottom");
+    },50);
+	});
+	$("li:nth-of-type(3)").click(function(){
+    $("#secretariat").removeClass("w3-animate-bottom");
+    setTimeout(function(){
+        $("#secretariat").addClass("w3-animate-bottom");
+    },50);
+	});
+	$("li:nth-of-type(4)").click(function(){
+    $("#committees").removeClass("w3-animate-bottom");
+    setTimeout(function(){
+        $("#committees").addClass("w3-animate-bottom");
+    },50);
+	});
+	$("li:nth-of-type(5)").click(function(){
+    $("#register").removeClass("w3-animate-bottom");
+    setTimeout(function(){
+        $("#register").addClass("w3-animate-bottom");
+    },50);
+	});
+	$("li:nth-of-type(6)").click(function(){
+    $("#schedule").removeClass("w3-animate-bottom");
+    setTimeout(function(){
+        $("#schedule").addClass("w3-animate-bottom");
+    },50);
+	});
+	$("li:nth-of-type(7)").click(function(){
+    $("#sponsors").removeClass("w3-animate-bottom");
+    setTimeout(function(){
+        $("#sponsors").addClass("w3-animate-bottom");
+    },50);
+	});
+	$("li:nth-of-type(8)").click(function(){
+    $("#contact").removeClass("w3-animate-bottom");
+    setTimeout(function(){
+        $("#contact").addClass("w3-animate-bottom");
+    },50);
+	});
+</script>
 <script type="text/javascript" src="custom.js"></script>
 </body>
 </html>
