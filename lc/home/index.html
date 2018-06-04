@@ -323,13 +323,13 @@
     </header>
 
     <div id="home" class="jumbotron text-center">
-        <div id="testt" class="w3-animate-bottom" style="padding-top: 50%;">
         	<div class="content">
             <div class="event-date">Dates</div>
             <h1>NITMUN '18</h1>
+            <div class="w3-animate-bottom">
             <p class="lead" id="animate"></p>
             <a class="page-scroll" href="#register"><button type="button" class="btn btn-default btn-lg">Register</button></a>
-        </div>
+            </div> 
         </div>
     </div>
     <!-- .Jumbotron-->
@@ -861,12 +861,6 @@
 <!--<script src="js/one-page-nav.js"></script>-->
 <script src="js/scripts.js"></script>
 <script type="text/javascript">
-	$("li:nth-of-type(2)").click(function(){
-    $("#home").removeClass("w3-animate-bottom");
-    setTimeout(function(){
-        $("#home").addClass("w3-animate-bottom");
-    },50);
-	});
 	$("li:nth-of-type(3)").click(function(){
     $("#secretariat").removeClass("w3-animate-bottom");
     setTimeout(function(){
