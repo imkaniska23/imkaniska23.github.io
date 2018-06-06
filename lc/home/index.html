@@ -12,6 +12,22 @@
     	{
     		animation: animatebottom 2s;
     	}
+    	.disp
+    	{
+    		display: none;
+    	}
+    	.aleft
+    	{
+    		text-align: left;
+    	}
+    	.acenter
+    	{
+    		text-align: center;
+    	}
+    	#register
+    	{
+    		text-transform: uppercase;
+    	}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- favicon -->
@@ -338,7 +354,7 @@
 
 
     <section class="section-wrapper about-event">
-        <div class="container" data-aos="zoom-in">
+        <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-8">
                     <p class="lead">
@@ -363,7 +379,7 @@
     <!-- .about-event -->
 
     <section id="secretariat" class="section-wrapper team gray-bg">
-        <div class="container" data-aos="zoom-in">
+        <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
@@ -448,7 +464,7 @@
     <!-- .team -->
 
     <section id="committees" class="section-wrapper pricing-section">
-        <div class="container" data-aos="zoom-in">
+        <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
@@ -493,9 +509,9 @@
     <!-- .pricing-section -->
 
     <section id="register" class="single-page scrollblock gray-bg del">
-        <div class="container" data-aos="zoom-in">
-            <h1 align='center' style="padding-top: 20px;"><font face="helvetica">Register as a Delegate</font></h1>
-            <div class="row">
+        <div class="container" data-aos="fade-up">
+            <span id="delhead"><h1 style="padding-top: 20px;" class="aleft"><i class="fa fa-caret-right" id="drop"></i><font face="helvetica">Register as a Delegate</font></h1></span>
+            <div class="row disp" id="del" data-aos="fade-up">
                     <div class="span12">
                         <div class="cform" id="theme-form">
                             <form name="regdel" method="post" action="regdel.php" role="form" id="signup" onsubmit="return validate();">
@@ -586,10 +602,10 @@
             </div>
           <!-- ./span12 -->
         </div>
-        <div class="container" data-aos="zoom-in">
+        <div class="container" data-aos="fade-up">
         	<legend class="pad"></legend>
-            <h1 align='center' style="padding-top:20px;"><font face="helvetica">Register as a member of International Press</font></h1>
-            <div class="row">
+            <span id="presshead"><h1  style="padding-top:20px;" class="aleft"><i class="fa fa-caret-right" id="dropa"></i><font face="helvetica">Register as a member of International Press</font></h1></span>
+            <div class="row disp" id="press">
                 <div class="span12">
                     <div class="cform" id="theme-form">
                         <form name="regpress" method="post" action="regpress.php" role="form" id="ip" onsubmit="return validateip();" >
@@ -666,7 +682,7 @@
     </section>
 
     <section id="schedule" class="section-wrapper section-ajenda gray-bg">
-        <div class="container" data-aos="zoom-in">
+        <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
@@ -763,7 +779,7 @@
     </section>
 
     <section id="sponsors" class="section-wrapper client-logo">
-        <div class="container" data-aos="zoom-in">
+        <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
@@ -798,7 +814,7 @@
 
 
 <section id="contact" class="section-wrapper  gray-bg">
-        <div class="container" data-aos="zoom-in">
+        <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
@@ -838,7 +854,7 @@
     <!-- contact-section -->
 
 
-    <footer class="footer" data-aos="zoom-in">
+    <footer class="footer" data-aos="fade-up">
         <div class="copyright-section">
             <div class="container">
                     <div class="sfooter">
@@ -903,6 +919,18 @@
 <script type="text/javascript" src="custom.js"></script>
 <script type="text/javascript">
    AOS.init();
+ </script>
+ <script type="text/javascript">
+ 	﻿$("#delhead").click(function(){
+    $("#drop").toggleClass("fa fa-caret-right");
+    $("#drop").toggleClass("fa fa-caret-down");
+    $("#del").toggleClass("disp");
+});
+ 	$("#presshead").click(function(){
+    $("#dropa").toggleClass("fa fa-caret-right");
+    $("#dropa").toggleClass("fa fa-caret-down");
+    $("#press").toggleClass("disp");
+});
  </script>
 </body>
 </html>
