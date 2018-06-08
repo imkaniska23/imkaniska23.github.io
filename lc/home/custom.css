@@ -93,6 +93,18 @@ input[type=submit]:hover {
     border-color: #00c8aa;
     color: #00c8aa;
 }
+.btn-primary:focus
+{
+    background-color: transparent;
+    border-color: #00c8aa;
+    color: #00c8aa;
+}
+.btn-primary:active
+{
+    background-color: transparent;
+    border-color: #00c8aa;
+    color: #00c8aa;
+}
 .btn-default
 {
    color: #00c8aa;

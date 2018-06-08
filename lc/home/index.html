@@ -289,6 +289,34 @@
 				document.getElementById("aa3").innerText="Portfolio Preference #3";	
 			}
 		}
+		function prswap()
+		{		
+			var c1=document.forms["ip"]["prcouncilpref1"].value;
+			if(c1==="UGASS")
+				{
+					document.getElementById("ag1").innerHTML=
+					"<label>Agency Choice Preference</label><select class='input-field' name='agencypref1'  class=\"form-control\"><option value='aljazeera' selected='selected'>Al Jazeera</option><option value='bbc' >BBC</option><option value='reuters' >Reuters</option></select>"
+				}
+			else
+				{		
+				document.getElementById("ag1").innerHTML=
+				"<label>Agency Choice Preference</label><select class='input-field' name='agencypref1'  class=\"form-control\"><option value='API' selected='selected'>Associated Press of India</option><option value='telegraph'>The Daily Telegraph</option><option value='hindu'>The Hindu</option></select>"
+				}
+		}
+		function prswap2()
+		{		
+			var c2=document.forms["ip"]["prcouncilpref2"].value;
+			if(c2==="UGASS")
+				{
+					document.getElementById("ag2").innerHTML=
+					"<label>Agency Choice Preference</label><select class='input-field' name='agencypref2'  class=\"form-control\"><option value='aljazeera' selected='selected'>Al Jazeera</option><option value='bbc' >BBC</option><option value='reuters' >Reuters</option></select>"
+				}
+			else
+				{		
+				document.getElementById("ag2").innerHTML=
+				"<label>Agency Choice Preference</label><select class='input-field' name='agencypref2'  class=\"form-control\"><option value='API' selected='selected'>Associated Press of India</option><option value='telegraph'>The Daily Telegraph</option><option value='hindu'>The Hindu</option></select>"
+				}
+		}
     </script>
  <!-- <style type="text/css" src="custom.css"></style> -->
  <link rel="stylesheet" type="text/css" href="custom.css">
@@ -392,7 +420,7 @@
             <div class="row">
                 <div class="col-sm-6 col-md-3" data-aos="fade-up">
                     <figure class="thumbnail">
-                        <a href=""><img src="img/empty.jpg" class="img-responsive" alt="Image"></a>
+                        <a href=""><img src="img/kashyap.jpg" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
                             <h3>kashyap mattoo
                                 <small>Secretary General</small>
@@ -409,7 +437,7 @@
 
                 <div class="col-sm-6 col-md-3" data-aos="fade-up">
                     <figure class="thumbnail">
-                        <a href=""><img src="img/empty.jpg" class="img-responsive" alt="Image"></a>
+                        <a href=""><img src="img/rahul.jpg" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
                             <h3>rahul ghosh
                                 <small>Under Secretary General</small>
@@ -426,7 +454,7 @@
 
                 <div class="col-sm-6 col-md-3" data-aos="fade-up">
                     <figure class="thumbnail">
-                        <a href=""><img src="img/empty.jpg" class="img-responsive" alt="Image"></a>
+                        <a href=""><img src="img/shivam.jpg" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
                             <h3>Shivam Singhal
                                 <small>Under Secretary General</small>
@@ -443,7 +471,7 @@
 
                 <div class="col-sm-6 col-md-3" data-aos="fade-up">
                     <figure class="thumbnail">
-                        <a href=""><img src="img/empty.jpg" class="img-responsive" alt="Image"></a>
+                        <a href=""><img src="img/shreyashee.jpg" class="img-responsive" alt="Image"></a>
                         <figcaption class="caption text-center">
                             <h3>Shreyashee Sinha
                                 <small>International Press Head</small>
@@ -512,7 +540,7 @@
 
     <section id="register" class="single-page scrollblock gray-bg del">
         <div class="container" data-aos="fade-up">
-            <span id="delhead"><h1 style="padding-top: 20px;font-family: Montserrat;" class="aleft"><i class="fa fa-caret-right" id="drop"></i>Register as a Delegate</h1></span>
+            <span id="delhead" style="cursor: pointer;"><h1 style="padding-top: 20px;font-family: Montserrat;" class="aleft"><i class="fa fa-caret-right" id="drop"></i>Register as a Delegate</h1></span>
             <div class="row disp" id="del" data-aos="fade-up">
                     <div class="span12">
                         <div class="cform" id="theme-form">
@@ -552,15 +580,15 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-lg-3">
-                                    <label id="a1">Country Preference #1</label>
+                                    <label id="a1">Country Preference #1</label><br><br>
                                     <input type='text' name="country1" placeholder='Preference #1' class='input-field'  class="form-control" required>
                                 </div>
                                 <div class="form-group col-lg-3">
-                                    <label id="a2">Country Preference #2</label>
+                                    <label id="a2">Country Preference #2</label><br><br>
                                     <input type='text' name="country2"  placeholder='Preference #2' class='input-field'  class="form-control" required/>
                                 </div>
                                 <div class="form-group col-lg-3">
-                                    <label id="a3">Country Preference #3</label>
+                                    <label id="a3">Country Preference #3</label><br><br>
                                     <input type='text' name="country3" placeholder='Preference #3' class='input-field'  class="form-control" required/>
                                 </div>
                             </div>
@@ -574,15 +602,15 @@
                                         </select>
                                 </div>
                                 <div class="form-group col-lg-3">
-                                    <label id="aa1">Country Preference #1</label>
+                                    <label id="aa1">Country Preference #1</label><br><br>
                                         <input type='text' name='c1' placeholder='Preference #1' class='input-field'  class="form-control" required/>
                                 </div>
                                 <div class="form-group col-lg-3">
-                                    <label id="aa2">Country Preference #2</label>
+                                    <label id="aa2">Country Preference #2</label><br><br>
                                         <input type='text' name='c2'  placeholder='Preference #2' class='input-field'  class="form-control" required/>
                                 </div>
                                 <div class="form-group col-lg-3">
-                                    <label id="aa3">Country Preference #3</label>
+                                    <label id="aa3">Country Preference #3</label><br><br>
                                         <input type='text' name='c3' placeholder='Preference #3' class='input-field'  class="form-control" required/>
                                 </div>
                             </div>
@@ -606,7 +634,7 @@
         </div>
         <div class="container" data-aos="fade-up">
         	<legend class="pad"></legend>
-   			<span id="presshead"><h1  style="padding-top:20px;font-family: Montserrat;" class="aleft"><i class="fa fa-caret-right" id="dropa"></i>Register as a member of International Press</h1></span>
+   			<span id="presshead" style="cursor: pointer;"><h1  style="padding-top:20px;font-family: Montserrat;" class="aleft"><i class="fa fa-caret-right" id="dropa"></i>Register as a member of International Press</h1></span>
             <div class="row disp" id="press">
                 <div class="span12">
                     <div class="cform" id="theme-form">
@@ -635,8 +663,14 @@
                                 <input type="email" name="email2" class="form-control" placeholder='example@xyz.com' class='input-field' required>
                             </div>
                         </div>
-                        <legend class="pad">Role and Agency Choice Preference</legend>
+                        <legend class="pad">Role and Agency Choice Preference #1</legend>
                         <div class="row">
+                        	<div class="form-group col-lg-4">
+                        	<label >Council Choice 1st Preference</label>
+                        	<select class='input-field' name="prcouncilpref1"  class="form-control" id="prcouncilpref1" onchange="prswap()">
+                                            <option value="UGASS" selected='selected'>UN GENERAL ASSEMBLY SPECIAL SESSION-THE ARCTIC CONFLICT</option>
+                                            <option value="RTC">THE 1947 ROUND TABLE CONFERENCE</option>
+                                    </select></div>
                         	<div class="form-group col-lg-4">
                                 <label >Role Preference</label>
                                 <select class='input-field' name='agencyrolepref1'  class="form-control">
@@ -644,20 +678,36 @@
                                     <option value='journalist' >Journalist</option>
                                 </select>
                             </div>
-                            <div class="form-group col-lg-4">
-                                <label >Agency Choice 1st Preference</label>
+                            <div class="form-group col-lg-4" id="ag1">
+                                <label >Agency Choice Preference</label>
                                 <select class='input-field' name='agencypref1'  class="form-control">
                                     <option value='aljazeera' selected='selected'>Al Jazeera</option>
                                     <option value='bbc' >BBC</option>
                                     <option value='reuters' >Reuters</option>
                                 </select>
                             </div>
-                            <div class="form-group col-lg-4">
-                                <label >Agency Choice 2nd Preference</label>
+                        </div>
+                        <legend class="pad">Role and Agency Choice Preference #2</legend>
+                        <div class="row">
+                        	<div class="form-group col-lg-4">
+                        	<label >Council Choice 2nd Preference</label>
+                        	<select class='input-field' name="prcouncilpref2"  class="form-control" id="prcouncilpref2" onchange="prswap2()">
+                                            <option value="UGASS" selected='selected'>UN GENERAL ASSEMBLY SPECIAL SESSION-THE ARCTIC CONFLICT</option>
+                                            <option value="RTC">THE 1947 ROUND TABLE CONFERENCE</option>
+                                    </select></div>
+                        	<div class="form-group col-lg-4">
+                                <label >Role Preference</label>
+                                <select class='input-field' name='agencyrolepref2'  class="form-control">
+                                    <option value='photographer' selected='selected'>Photographer</option>
+                                    <option value='journalist' >Journalist</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-lg-4" id="ag2">
+                                <label >Agency Choice Preference</label>
                                 <select class='input-field' name='agencypref2'  class="form-control">
                                     <option value='aljazeera' selected='selected'>Al Jazeera</option>
                                     <option value='bbc' >BBC</option>
-                                        <option value='reuters' >Reuters</option>
+                                    <option value='reuters' >Reuters</option>
                                 </select>
                             </div>
                         </div>

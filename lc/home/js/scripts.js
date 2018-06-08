@@ -70,13 +70,13 @@ jQuery(function ($) {
             //we define here the style of the map
             var style = [{
                 "stylers" : [{
-                    "hue" : "#000"
+                    "hue" : "#00fbd5"
                 }, {
                     "saturation" : 100
                 }, {
                     "gamma" : 1.15
                 }, {
-                    "lightness" : 5
+                    "lightness" : 30
                 }]
             }];
 
