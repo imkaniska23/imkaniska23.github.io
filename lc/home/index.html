@@ -10,26 +10,26 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <style type="text/css">
-    	.w3-animate-bottom
-    	{
-    		animation: animatebottom 2s;
-    	}
-    	.disp
-    	{
-    		display: none;
-    	}
-    	.aleft
-    	{
-    		text-align: left;
-    	}
-    	.acenter
-    	{
-    		text-align: center;
-    	}
-    	#register
-    	{
-    		text-transform: uppercase;
-    	}
+      .w3-animate-bottom
+      {
+        animation: animatebottom 2s;
+      }
+      .disp
+      {
+        display: none;
+      }
+      .aleft
+      {
+        text-align: left;
+      }
+      .acenter
+      {
+        text-align: center;
+      }
+      #register
+      {
+        text-transform: uppercase;
+      }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- favicon -->
@@ -44,13 +44,13 @@
     <!-- Style CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- jquery -->
-	<script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/jquery-2.1.4.min.js"></script>
 
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
 
-	<!-- Plugin JavaScript -->
-	<script src="js/jquery.easing.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -257,66 +257,78 @@
    }
     </script>
     <script type="text/javascript">
-    	function swap()
-		{
-			var c1=document.forms["signup"]["councilpref1"].value;
-			if(c1==="UGASS")
-			{
-				document.getElementById("a1").innerText="Country Preference #1";
-				document.getElementById("a2").innerText="Country Preference #2";
-				document.getElementById("a3").innerText="Country Preference #3";
-			}
-			else
-			{
-				document.getElementById("a1").innerText="Portfolio Preference #1";
-				document.getElementById("a2").innerText="Portfolio Preference #2";
-				document.getElementById("a3").innerText="Portfolio Preference #3";	
-			}
-		}
-		function swap2()
-		{
-			var c2=document.forms["signup"]["councilpref2"].value;
-			if(c2==="UGASS")
-			{
-				document.getElementById("aa1").innerText="Country Preference #1";
-				document.getElementById("aa2").innerText="Country Preference #2";
-				document.getElementById("aa3").innerText="Country Preference #3";
-			}
-			else
-			{
-				document.getElementById("aa1").innerText="Portfolio Preference #1";
-				document.getElementById("aa2").innerText="Portfolio Preference #2";
-				document.getElementById("aa3").innerText="Portfolio Preference #3";	
-			}
-		}
-		function prswap()
-		{		
-			var c1=document.forms["ip"]["prcouncilpref1"].value;
-			if(c1==="UGASS")
-				{
-					document.getElementById("ag1").innerHTML=
-					"<label>Agency Choice Preference</label><select class='input-field' name='agencypref1'  class=\"form-control\"><option value='aljazeera' selected='selected'>Al Jazeera</option><option value='bbc' >BBC</option><option value='reuters' >Reuters</option></select>"
-				}
-			else
-				{		
-				document.getElementById("ag1").innerHTML=
-				"<label>Agency Choice Preference</label><select class='input-field' name='agencypref1'  class=\"form-control\"><option value='API' selected='selected'>Associated Press of India</option><option value='telegraph'>The Daily Telegraph</option><option value='hindu'>The Hindu</option></select>"
-				}
-		}
-		function prswap2()
-		{		
-			var c2=document.forms["ip"]["prcouncilpref2"].value;
-			if(c2==="UGASS")
-				{
-					document.getElementById("ag2").innerHTML=
-					"<label>Agency Choice Preference</label><select class='input-field' name='agencypref2'  class=\"form-control\"><option value='aljazeera' selected='selected'>Al Jazeera</option><option value='bbc' >BBC</option><option value='reuters' >Reuters</option></select>"
-				}
-			else
-				{		
-				document.getElementById("ag2").innerHTML=
-				"<label>Agency Choice Preference</label><select class='input-field' name='agencypref2'  class=\"form-control\"><option value='API' selected='selected'>Associated Press of India</option><option value='telegraph'>The Daily Telegraph</option><option value='hindu'>The Hindu</option></select>"
-				}
-		}
+      function swap()
+    {
+      var c1=document.forms["signup"]["councilpref1"].value;
+      if(c1==="UGASS")
+      {
+        document.getElementById("a1").innerText="Country Preference #1";
+        document.getElementById("a2").innerText="Country Preference #2";
+        document.getElementById("a3").innerText="Country Preference #3";
+      }
+      else
+      {
+        document.getElementById("a1").innerText="Portfolio Preference #1";
+        document.getElementById("a2").innerText="Portfolio Preference #2";
+        document.getElementById("a3").innerText="Portfolio Preference #3";  
+      }
+    }
+    function swap2()
+    {
+      var c2=document.forms["signup"]["councilpref2"].value;
+      if(c2==="UGASS")
+      {
+        document.getElementById("aa1").innerText="Country Preference #1";
+        document.getElementById("aa2").innerText="Country Preference #2";
+        document.getElementById("aa3").innerText="Country Preference #3";
+      }
+      else
+      {
+        document.getElementById("aa1").innerText="Portfolio Preference #1";
+        document.getElementById("aa2").innerText="Portfolio Preference #2";
+        document.getElementById("aa3").innerText="Portfolio Preference #3"; 
+      }
+    }
+    function prswap()
+    {   
+      var c1=document.forms["ip"]["prcouncilpref1"].value;
+      if(c1==="UGASS")
+        {
+          document.getElementById("ag1").innerHTML=
+          "<label>Agency Choice Preference</label><select class='input-field' name='agencypref1'  class=\"form-control\"><option value='aljazeera' selected='selected'>Al Jazeera</option><option value='bbc' >BBC</option><option value='reuters' >Reuters</option></select>"
+        }
+      else
+        {   
+        document.getElementById("ag1").innerHTML=
+        "<label>Agency Choice Preference</label><select class='input-field' name='agencypref1'  class=\"form-control\"><option value='API' selected='selected'>Associated Press of India</option><option value='telegraph'>The Daily Telegraph</option><option value='hindu'>The Hindu</option></select>"
+        }
+    }
+    function prswap2()
+    {   
+      var c2=document.forms["ip"]["prcouncilpref2"].value;
+      if(c2==="UGASS")
+        {
+          document.getElementById("ag2").innerHTML=
+          "<label>Agency Choice Preference</label><select class='input-field' name='agencypref2'  class=\"form-control\"><option value='aljazeera' selected='selected'>Al Jazeera</option><option value='bbc' >BBC</option><option value='reuters' >Reuters</option></select>"
+        }
+      else
+        {   
+        document.getElementById("ag2").innerHTML=
+        "<label>Agency Choice Preference</label><select class='input-field' name='agencypref2'  class=\"form-control\"><option value='API' selected='selected'>Associated Press of India</option><option value='telegraph'>The Daily Telegraph</option><option value='hindu'>The Hindu</option></select>"
+        }
+    }
+    function favchange()
+    {
+      var k=document.querySelector("li");
+      if($(k).hasClass('active'))
+      {
+        $("#logo").attr("src","img/logo33B.png");
+      }
+      else
+      {
+        $("#logo").attr("src","img/logo33A.png");
+      }
+    }
     </script>
  <!-- <style type="text/css" src="custom.css"></style> -->
  <link rel="stylesheet" type="text/css" href="custom.css">
@@ -324,7 +336,7 @@
  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar" >
+<body id="page-top" data-spy="scroll" data-target=".navbar" onscroll="favchange()">
 <div id="main-wrapper">
     <!-- Page Preloader -->
     <div id="preloader">
@@ -344,7 +356,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo33A.png" alt=""></a>
+                    <a class="navbar-brand page-scroll" href="#page-top"><img src="img/logo33B.png" alt="" id="logo"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -370,8 +382,8 @@
 
     </header>
 
-    <div id="home" class="jumbotron text-center">
-        	<div class="content">
+    <div class="jumbotron text-center">
+          <div class="content">
             <div class="event-date">Dates</div>
             <h1>NITMUN '18</h1>
             <div class="w3-animate-bottom">
@@ -383,7 +395,7 @@
     <!-- .Jumbotron-->
 
 
-    <section class="section-wrapper about-event" id="intro" style="color:#fff;background-color: #323a45;" data-aos="fade-up">
+    <section id="home" class="section-wrapper about-event" id="intro" style="color:#fff;background-color: #323a45;" data-aos="fade-up">
         <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-8">
@@ -633,8 +645,8 @@
           <!-- ./span12 -->
         </div>
         <div class="container" data-aos="fade-up">
-        	<legend class="pad"></legend>
-   			<span id="presshead" style="cursor: pointer;"><h1  style="padding-top:20px;font-family: Montserrat;" class="aleft"><i class="fa fa-caret-right" id="dropa"></i>Register as a member of International Press</h1></span>
+          <legend class="pad"></legend>
+        <span id="presshead" style="cursor: pointer;"><h1  style="padding-top:20px;font-family: Montserrat;" class="aleft"><i class="fa fa-caret-right" id="dropa"></i>Register as a member of International Press</h1></span>
             <div class="row disp" id="press">
                 <div class="span12">
                     <div class="cform" id="theme-form">
@@ -665,13 +677,13 @@
                         </div>
                         <legend class="pad">Role and Agency Choice Preference #1</legend>
                         <div class="row">
-                        	<div class="form-group col-lg-4">
-                        	<label >Council Choice 1st Preference</label>
-                        	<select class='input-field' name="prcouncilpref1"  class="form-control" id="prcouncilpref1" onchange="prswap()">
+                          <div class="form-group col-lg-4">
+                          <label >Council Choice 1st Preference</label>
+                          <select class='input-field' name="prcouncilpref1"  class="form-control" id="prcouncilpref1" onchange="prswap()">
                                             <option value="UGASS" selected='selected'>UN GENERAL ASSEMBLY SPECIAL SESSION-THE ARCTIC CONFLICT</option>
                                             <option value="RTC">THE 1947 ROUND TABLE CONFERENCE</option>
                                     </select></div>
-                        	<div class="form-group col-lg-4">
+                          <div class="form-group col-lg-4">
                                 <label >Role Preference</label>
                                 <select class='input-field' name='agencyrolepref1'  class="form-control">
                                     <option value='photographer' selected='selected'>Photographer</option>
@@ -689,13 +701,13 @@
                         </div>
                         <legend class="pad">Role and Agency Choice Preference #2</legend>
                         <div class="row">
-                        	<div class="form-group col-lg-4">
-                        	<label >Council Choice 2nd Preference</label>
-                        	<select class='input-field' name="prcouncilpref2"  class="form-control" id="prcouncilpref2" onchange="prswap2()">
+                          <div class="form-group col-lg-4">
+                          <label >Council Choice 2nd Preference</label>
+                          <select class='input-field' name="prcouncilpref2"  class="form-control" id="prcouncilpref2" onchange="prswap2()">
                                             <option value="UGASS" selected='selected'>UN GENERAL ASSEMBLY SPECIAL SESSION-THE ARCTIC CONFLICT</option>
                                             <option value="RTC">THE 1947 ROUND TABLE CONFERENCE</option>
                                     </select></div>
-                        	<div class="form-group col-lg-4">
+                          <div class="form-group col-lg-4">
                                 <label >Role Preference</label>
                                 <select class='input-field' name='agencyrolepref2'  class="form-control">
                                     <option value='photographer' selected='selected'>Photographer</option>
@@ -931,54 +943,54 @@
 <!-- <script src="js/one-page-nav.js"></script> -->
 <script src="js/scripts.js"></script>
 <!-- <script type="text/javascript">
-	$("li:nth-of-type(3)").click(function(){
+  $("li:nth-of-type(3)").click(function(){
     $("#secretariat").removeClass("w3-animate-bottom");
     setTimeout(function(){
         $("#secretariat").addClass("w3-animate-bottom");
     },50);
-	});
-	$("li:nth-of-type(4)").click(function(){
+  });
+  $("li:nth-of-type(4)").click(function(){
     $("#committees").removeClass("w3-animate-bottom");
     setTimeout(function(){
         $("#committees").addClass("w3-animate-bottom");
     },50);
-	});
-	$("li:nth-of-type(5)").click(function(){
+  });
+  $("li:nth-of-type(5)").click(function(){
     $("#register").removeClass("w3-animate-bottom");
     setTimeout(function(){
         $("#register").addClass("w3-animate-bottom");
     },50);
-	});
-	$("li:nth-of-type(6)").click(function(){
+  });
+  $("li:nth-of-type(6)").click(function(){
     $("#schedule").removeClass("w3-animate-bottom");
     setTimeout(function(){
         $("#schedule").addClass("w3-animate-bottom");
     },50);
-	});
-	$("li:nth-of-type(7)").click(function(){
+  });
+  $("li:nth-of-type(7)").click(function(){
     $("#sponsors").removeClass("w3-animate-opacity");
     setTimeout(function(){
         $("#sponsors").addClass("w3-animate-opacity");
     },50);
-	});
-	$("li:nth-of-type(8)").click(function(){
+  });
+  $("li:nth-of-type(8)").click(function(){
     $("#contact").removeClass("w3-animate-bottom");
     setTimeout(function(){
         $("#contact").addClass("w3-animate-bottom");
     },50);
-	});
+  });
 </script> -->
 <script type="text/javascript" src="custom.js"></script>
 <script type="text/javascript">
    AOS.init();
  </script>
  <script type="text/javascript">
- 	﻿$("#delhead").click(function(){
+  ﻿$("#delhead").click(function(){
     $("#drop").toggleClass("fa fa-caret-right");
     $("#drop").toggleClass("fa fa-caret-down");
     $("#del").toggleClass("disp");
 });
- 	$("#presshead").click(function(){
+  $("#presshead").click(function(){
     $("#dropa").toggleClass("fa fa-caret-right");
     $("#dropa").toggleClass("fa fa-caret-down");
     $("#press").toggleClass("disp");
