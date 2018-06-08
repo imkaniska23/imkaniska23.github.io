@@ -7,7 +7,7 @@ body{
 
 
 
-#secretariat,#schedule,#committees,#register,#about,#page-top,#contact,#sponsors
+#secretariat,#schedule,#committees,#register,#about,#page-top,#contact,#sponsors,.footer
 {
 	background-color: #323a45;
 	color:#B7B7B9;
@@ -21,14 +21,14 @@ body{
 .pad
 {
 	color: white;
+	padding-top: 20px;
 }
 
 
 h1
 {
 	color: white;
-	
-font-family:Abel;
+	font-family:Montserrat;
 
 }
 h2
