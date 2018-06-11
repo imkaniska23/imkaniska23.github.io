@@ -43,7 +43,7 @@ body {
     color       : #353e55;
     font-weight : 100;
     background  : #ffffff;
-    border      : 10px solid #fff;
+    /*border      : 10px solid #fff;*/
     }
 
 /* --------------------------------------
@@ -560,7 +560,7 @@ button:focus,
  *---------------------------*/
 
 .pricing-section .pricing-table-default {
-    border         : 1px solid #f1f1f1;
+    /*border         : 1px solid #f1f1f1;*/
     background     : #ffffff;
     padding-bottom : 40px;
     }
