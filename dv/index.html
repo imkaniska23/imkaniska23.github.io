@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Deja Vu</title>
+	<!-- jQuery v2.1.4 -->
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<!-- Bootstrao JS -->
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+<div class="container">
+	<img class="disp" src="assets/images/1.jpg">
+</div>
+<!-- Main JS -->
+<link rel="stylesheet" type="text/css" href="assets/js/main.js">
+<script type="text/javascript">
+	window.onload=function(){
+		var winHeight=$(window).height();
+		var imgHeight=winHeight+"px";
+		$(".disp").css("height",imgHeight);
+		$(window).resize(function(){
+			var winHeight=$(window).height();
+			var imgHeight=winHeight+"px";
+			$(".disp").css("height",imgHeight);
+		});
+	};
+</script>
+</body>
+</html>
