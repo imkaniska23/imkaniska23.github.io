@@ -6,6 +6,8 @@
 	<title>Deja Vu</title>
 	<!-- jQuery v2.1.4 -->
 	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<!-- Bootstrao JS -->
@@ -14,20 +16,39 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-<div class="container">
-	<img class="disp" src="assets/images/1.jpg">
+<div class="container" style="align-items: center;">
+	<i class="fa fa-caret-left" aria-hidden="true"></i><i class="fa fa-caret-right" aria-hidden="true"></i><img class="disp" src="assets/images/1.jpg">
 </div>
 <!-- Main JS -->
-<link rel="stylesheet" type="text/css" href="assets/js/main.js">
+<script type="text/javascript" src="assets/js/main.js"></script>
 <script type="text/javascript">
 	window.onload=function(){
+		$(".fa").delay(1000).fadeOut();
 		var winHeight=$(window).height();
+		var winWidth=$(window).width();
 		var imgHeight=winHeight+"px";
 		$(".disp").css("height",imgHeight);
+		var iconHeight=(winHeight/2)+"px";
+		var rightWidth=(winWidth-20)+"px";
+		$(".fa").css("marginTop",iconHeight);
+		$(".fa-caret-right").css("marginLeft",($(".container").width()-20)+"px");
 		$(window).resize(function(){
 			var winHeight=$(window).height();
+			var winWidth=$(window).width();
 			var imgHeight=winHeight+"px";
 			$(".disp").css("height",imgHeight);
+			var iconHeight=(winHeight/2)+"px";
+			var rightWidth=(winWidth-20)+"px";
+			$(".fa").css("marginTop",iconHeight);
+			$(".fa-caret-right").css("marginLeft",($(".container").width()-20)+"px");
+		});
+		$("body").mousemove(function(){
+			$(".fa").css("display","block");
+			$(".fa").delay(1000).fadeOut();
+		});
+		$("body").click(function(){
+			$(".fa").css("display","block");
+			$(".fa").delay(1000).fadeOut();
 		});
 	};
 </script>
