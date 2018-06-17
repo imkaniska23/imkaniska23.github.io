@@ -18,7 +18,8 @@ body
 }
 .fa
 {
-	font-size: 60px;
+	font-size: 70px;
+	color: blue;
 }
 .fa-caret-left
 {

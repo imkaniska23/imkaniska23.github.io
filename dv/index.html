@@ -44,11 +44,19 @@
 		});
 		$("body").mousemove(function(){
 			$(".fa").css("display","block");
-			$(".fa").delay(1000).fadeOut();
+			$(".fa").delay(6000).fadeOut();
 		});
 		$("body").click(function(){
 			$(".fa").css("display","block");
-			$(".fa").delay(4000).fadeOut();
+			$(".fa").delay(6000).fadeOut();
+		});
+		$(".fa-caret-left").click(function(event){
+			event.stopPropagation();
+			alert("You clicked the left caret. In time, it will take you to previous page.");
+		});
+		$(".fa-caret-right").click(function(event){
+			event.stopPropagation();
+			alert("You clicked the right caret. In time, it will take you to next page.");
 		});
 	};
 </script>
