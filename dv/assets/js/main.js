@@ -158,11 +158,11 @@ window.onload=function(){
 				$(".disp").fadeIn();				
 			}
 		});
-		hammer.on('swipeleft', function(){
+		hammer.on('swipeup', function(){
 			localStorage.pageNo=prompt("Enter Page No.(1-3)");
 			$(".disp").fadeOut(function(){
 					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
 				});
 			$(".disp").fadeIn();
-		}
+		});
 	};
