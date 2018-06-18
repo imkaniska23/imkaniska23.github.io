@@ -1,15 +1,11 @@
-document.body.addEventListener("keydown",function(e){
-			if(e.which==37)
-			{
-				alert("You pressed left arrow key.In time, it'll take you to previous page");
-			}
-			else
-				if(e.which==39)
-				{
-					alert("You pressed the right arrow key. In time, it'll take you to the next page");
-				}
-		})
 window.onload=function(){
+		var imageType="jpg";
+		var totalPages=3;
+		if(!localStorage.pageNo)
+		{
+			localStorage.pageNo=1;
+		}
+		$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");
 		$(".fa").delay(3000).fadeOut();
 		var winHeight=$(window).height();
 		var winWidth=$(window).width();
@@ -37,12 +33,136 @@ window.onload=function(){
 			$(".fa").css("display","block");
 			$(".fa").delay(6000).fadeOut();
 		});
+		document.body.addEventListener("keydown",function(e){
+			if(e.which==37)
+			{
+				if(localStorage.pageNo==1)
+				{
+					localStorage.pageNo=totalPages;
+					$(".disp").fadeOut(function(){
+						$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					});
+					$(".disp").fadeIn();
+				}
+				else
+				{
+					localStorage.pageNo--;
+					$(".disp").fadeOut(function(){
+						$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					});
+					$(".disp").fadeIn();
+				}
+			}
+			else
+				if(e.which==39)
+				{
+					if(localStorage.pageNo==totalPages)
+				{
+					localStorage.pageNo=1;
+					$(".disp").fadeOut(function(){
+						$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					});
+					$(".disp").fadeIn();
+				}
+				else
+				{
+					localStorage.pageNo++;
+					$(".disp").fadeOut(function(){
+						$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					});
+					$(".disp").fadeIn();
+				}
+				}
+		})
 		$(".fa-caret-left").click(function(event){
 			event.stopPropagation();
-			alert("You clicked the left caret. In time, it will take you to previous page.");
+			if(localStorage.pageNo==1)
+			{
+				localStorage.pageNo=totalPages;
+				$(".disp").fadeOut(function(){
+					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+				});
+				$(".disp").fadeIn();
+			}
+			else
+			{
+				localStorage.pageNo--;
+				$(".disp").fadeOut(function(){
+					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+				});
+				$(".disp").fadeIn();
+			}
 		});
 		$(".fa-caret-right").click(function(event){
 			event.stopPropagation();
-			alert("You clicked the right caret. In time, it will take you to next page.");
+			if(localStorage.pageNo==totalPages)
+			{
+				localStorage.pageNo=1;
+				$(".disp").fadeOut(function(){
+					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+				});
+				$(".disp").fadeIn();
+				
+			}
+			else
+			{
+				localStorage.pageNo++;
+				$(".disp").fadeOut(function(){
+					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+				});
+				$(".disp").fadeIn();				
+			}
 		});
+		var blue      = document.querySelector(".container");
+		var hammer    = new Hammer.Manager(blue);
+		var swipe     = new Hammer.Swipe();
+
+		hammer.add(swipe);
+
+		hammer.on('swiperight', function(){
+   			event.stopPropagation();
+			if(localStorage.pageNo==1)
+			{
+				localStorage.pageNo=totalPages;
+				$(".disp").fadeOut(function(){
+					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+				});
+				$(".disp").fadeIn();
+			}
+			else
+			{
+				localStorage.pageNo--;
+				$(".disp").fadeOut(function(){
+					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+				});
+				$(".disp").fadeIn();
+			}
+		});
+
+		hammer.on('swipeleft', function(){
+   			if(localStorage.pageNo==totalPages)
+			{
+				localStorage.pageNo=1;
+				$(".disp").fadeOut(function(){
+					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+				});
+				$(".disp").fadeIn();
+				
+			}
+			else
+			{
+				localStorage.pageNo++;
+				$(".disp").fadeOut(function(){
+					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+				});
+				$(".disp").fadeIn();				
+			}
+		});
+		hammer.on('swipeleft', function(){
+			localStorage.pageNo=prompt("Enter Page No.(1-3)");
+			$(".disp").fadeOut(function(){
+					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+				});
+			$(".disp").fadeIn();
+		}
 	};
