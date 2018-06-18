@@ -160,6 +160,10 @@ window.onload=function(){
 		});
 		hammer.on('swipeup', function(){
 			localStorage.pageNo=prompt("Enter Page No.(1-3)");
+			if(!localStorage.pageNo)
+			{
+				localStorage.pageNo=1;
+			}
 			$(".disp").fadeOut(function(){
 					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
 				});
