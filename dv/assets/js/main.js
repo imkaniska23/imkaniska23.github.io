@@ -4,6 +4,7 @@ window.onload=function(){
 		if(!localStorage.pageNo)
 		{
 			localStorage.pageNo=0;
+			alert("Swipe left,right to navigate. Swipe up/Arrow key up to enter page no.");
 		}
 		$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");
 		$(".fa").delay(3000).fadeOut();
@@ -73,6 +74,19 @@ window.onload=function(){
 					$(".disp").fadeIn();
 				}
 				}
+				else
+					if(e.which==38)
+					{
+						localStorage.pageNo=prompt("Enter Page No.(0-42)");
+						if(!localStorage.pageNo)
+						{
+							localStorage.pageNo=0;
+						}
+						$(".disp").fadeOut(function(){
+							$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+						});
+						$(".disp").fadeIn();
+					}
 		})
 		$(".fa-caret-left").click(function(event){
 			event.stopPropagation();
