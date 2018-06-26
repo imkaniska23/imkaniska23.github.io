@@ -1,9 +1,9 @@
 window.onload=function(){
 		var imageType="jpg";
-		var totalPages=3;
+		var totalPages=43;
 		if(!localStorage.pageNo)
 		{
-			localStorage.pageNo=1;
+			localStorage.pageNo=0;
 		}
 		$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");
 		$(".fa").delay(3000).fadeOut();
@@ -36,9 +36,9 @@ window.onload=function(){
 		document.body.addEventListener("keydown",function(e){
 			if(e.which==37)
 			{
-				if(localStorage.pageNo==1)
+				if(localStorage.pageNo==0)
 				{
-					localStorage.pageNo=totalPages;
+					localStorage.pageNo=totalPages-1;
 					$(".disp").fadeOut(function(){
 						$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
 					});
@@ -56,9 +56,9 @@ window.onload=function(){
 			else
 				if(e.which==39)
 				{
-					if(localStorage.pageNo==totalPages)
+					if(localStorage.pageNo==(totalPages-1))
 				{
-					localStorage.pageNo=1;
+					localStorage.pageNo=0;
 					$(".disp").fadeOut(function(){
 						$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
 					});
@@ -76,9 +76,9 @@ window.onload=function(){
 		})
 		$(".fa-caret-left").click(function(event){
 			event.stopPropagation();
-			if(localStorage.pageNo==1)
+			if(localStorage.pageNo==0)
 			{
-				localStorage.pageNo=totalPages;
+				localStorage.pageNo=(totalPages-1);
 				$(".disp").fadeOut(function(){
 					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
 				});
@@ -95,9 +95,9 @@ window.onload=function(){
 		});
 		$(".fa-caret-right").click(function(event){
 			event.stopPropagation();
-			if(localStorage.pageNo==totalPages)
+			if(localStorage.pageNo==(totalPages-1))
 			{
-				localStorage.pageNo=1;
+				localStorage.pageNo=0;
 				$(".disp").fadeOut(function(){
 					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
 				});
@@ -121,9 +121,9 @@ window.onload=function(){
 
 		hammer.on('swiperight', function(){
    			event.stopPropagation();
-			if(localStorage.pageNo==1)
+			if(localStorage.pageNo==0)
 			{
-				localStorage.pageNo=totalPages;
+				localStorage.pageNo=(totalPages-1);
 				$(".disp").fadeOut(function(){
 					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
 				});
@@ -140,9 +140,9 @@ window.onload=function(){
 		});
 
 		hammer.on('swipeleft', function(){
-   			if(localStorage.pageNo==totalPages)
+   			if(localStorage.pageNo==(totalPages-1))
 			{
-				localStorage.pageNo=1;
+				localStorage.pageNo=0;
 				$(".disp").fadeOut(function(){
 					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
 				});
@@ -159,10 +159,10 @@ window.onload=function(){
 			}
 		});
 		hammer.on('swipeup', function(){
-			localStorage.pageNo=prompt("Enter Page No.(1-3)");
+			localStorage.pageNo=prompt("Enter Page No.(0-42)");
 			if(!localStorage.pageNo)
 			{
-				localStorage.pageNo=1;
+				localStorage.pageNo=0;
 			}
 			$(".disp").fadeOut(function(){
 					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
