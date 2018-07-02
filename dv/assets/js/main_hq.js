@@ -6,7 +6,7 @@ window.onload=function(){
 			localStorage.pageNo=0;
 			alert("Swipe left,right to navigate. Swipe up/Arrow key up to enter page no.");
 		}
-		$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");
+		$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");
 		$(".fa").delay(3000).fadeOut(200);
 		var winHeight=$(window).height();
 		var winWidth=$(window).width();
@@ -41,7 +41,7 @@ window.onload=function(){
 				{
 					localStorage.pageNo=totalPages-1;
 					$(".disp").fadeOut(200,function(){
-						$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+						$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 					});
 					$(".disp").fadeIn(200);
 				}
@@ -49,7 +49,7 @@ window.onload=function(){
 				{
 					localStorage.pageNo--;
 					$(".disp").fadeOut(200,function(){
-						$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+						$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 					});
 					$(".disp").fadeIn(200);
 				}
@@ -61,7 +61,7 @@ window.onload=function(){
 				{
 					localStorage.pageNo=0;
 					$(".disp").fadeOut(200, function(){
-						$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+						$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 					});
 					$(".disp").fadeIn(200);
 				}
@@ -69,7 +69,7 @@ window.onload=function(){
 				{
 					localStorage.pageNo++;
 					$(".disp").fadeOut(200, function(){
-						$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+						$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 					});
 					$(".disp").fadeIn(200);
 				}
@@ -83,7 +83,7 @@ window.onload=function(){
 							localStorage.pageNo=0;
 						}
 						$(".disp").fadeOut(200, function(){
-							$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+							$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 						});
 						$(".disp").fadeIn(200);
 					}
@@ -94,7 +94,7 @@ window.onload=function(){
 			{
 				localStorage.pageNo=(totalPages-1);
 				$(".disp").fadeOut(200, function(){
-					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 				});
 				$(".disp").fadeIn(200);
 			}
@@ -102,7 +102,7 @@ window.onload=function(){
 			{
 				localStorage.pageNo--;
 				$(".disp").fadeOut(200, function(){
-					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 				});
 				$(".disp").fadeIn(200);
 			}
@@ -113,7 +113,7 @@ window.onload=function(){
 			{
 				localStorage.pageNo=0;
 				$(".disp").fadeOut(200, function(){
-					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 				});
 				$(".disp").fadeIn(200);
 				
@@ -122,7 +122,7 @@ window.onload=function(){
 			{
 				localStorage.pageNo++;
 				$(".disp").fadeOut(200, function(){
-					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 				});
 				$(".disp").fadeIn(200);				
 			}
@@ -139,7 +139,7 @@ window.onload=function(){
 			{
 				localStorage.pageNo=(totalPages-1);
 				$(".disp").fadeOut(200, function(){
-					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 				});
 				$(".disp").fadeIn(200);
 			}
@@ -147,7 +147,7 @@ window.onload=function(){
 			{
 				localStorage.pageNo--;
 				$(".disp").fadeOut(200, function(){
-					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 				});
 				$(".disp").fadeIn(200);
 			}
@@ -158,7 +158,7 @@ window.onload=function(){
 			{
 				localStorage.pageNo=0;
 				$(".disp").fadeOut(200, function(){
-					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 				});
 				$(".disp").fadeIn(200);
 				
@@ -167,7 +167,7 @@ window.onload=function(){
 			{
 				localStorage.pageNo++;
 				$(".disp").fadeOut(200, function(){
-					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 				});
 				$(".disp").fadeIn(200);				
 			}
@@ -179,7 +179,7 @@ window.onload=function(){
 				localStorage.pageNo=0;
 			}
 			$(".disp").fadeOut(200, function(){
-					$(".disp").attr("src","assets/images/"+localStorage.pageNo+".jpg");	
+					$(".disp").attr("src","assets/images/hq/"+localStorage.pageNo+".jpg");	
 				});
 			$(".disp").fadeIn(200);
 		});
