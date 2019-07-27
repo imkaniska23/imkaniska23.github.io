@@ -1,0 +1,129 @@
+.footer .copyright-section
+     {
+        font-size:20px;
+     }
+     .sfooter
+     {
+        text-align: center;
+        font-size: 20px;
+     }
+.form-control.input-lg, input[type=text],input[type=tel],input[type=email], select,textarea {
+
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    outline: medium none;
+    border-radius: .3rem;
+    border: none;
+    box-sizing: border-box;
+    background-color: #2e353f;
+    transition: all .2s ease-in-out;
+    margin-left: 5%;
+}
+.form-control.input-lg:focus,input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus,select:focus, textarea:focus
+{
+    outline: none;
+    color: #fff;
+    background-color: #293039;
+}
+.form-control.input-lg:hover,input[type=text]:hoverhovert[type=tel]:hover,input[type=email]:hover,select:hover,textarea:hover
+{
+    outline: none;
+    color: #fff;
+    background-color: #293039;
+}
+textarea
+{
+    width: 90%;
+    padding: 12px 20px;
+    margin-left: 5%;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    color: #fff;
+    background-color: #00c8aa;
+    border-color: #00c8aa;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    /*border-radius: 4px;*/
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+input[type=submit]:hover {
+    color: #fff;
+    background-color: #00fbd5;
+    border-color: #00c8aa;
+}
+.jumbotron p
+{
+    font-weight: 500;
+}
+.del
+{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.pricing-section .pricing-head .price {
+    display: block;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 600;
+    padding: 43px 0 0;
+    padding-bottom: 50px;
+    padding-top: 60px;
+}
+.main-menu .nav li a:hover, .main-menu .nav li.active a
+{
+    color: #00c8aa;
+}
+.pricing-section .pricing-head h3
+{
+    background-color: #00c8aa;
+}
+.btn-primary:hover
+{
+    background-color: transparent;
+    border-color: #00c8aa;
+    color: #00c8aa;
+}
+.btn-primary:focus
+{
+    background-color: transparent;
+    border-color: #00c8aa;
+    color: #00c8aa;
+}
+.btn-primary:active
+{
+    background-color: transparent;
+    border-color: #00c8aa;
+    color: #00c8aa;
+}
+.btn-default
+{
+   color: #00c8aa;
+   border-color: #00c8aa;
+   transition: all .2s ease-in-out;
+}
+.btn-default:hover
+{
+    color: #00fbd5;
+    border-color: #00c8aa;
+}
+.btn-default:active
+{
+    color: #00fbd5;
+    border-color: #00c8aa;
+}
+.btn-default:focus
+{
+    color: #00fbd5;
+    border-color: #00c8aa;
+}

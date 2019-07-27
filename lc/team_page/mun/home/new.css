@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+	background-color: #323a45;
+	color: black;
+}
+
+
+
+#secretariat,#schedule,#tutorials,#committees,#register,#about,#page-top,#contact,#sponsors,.footer
+{
+	background-color: #323a45;
+	color:#B7B7B9;
+	font-family:Montserrat;
+	
+}
+.col-md-12
+{
+	color:black;
+}
+.pad
+{
+	color: white;
+	padding-top: 20px;
+	font-size: 18px;
+}
+
+
+h1
+{
+	color: white;
+	font-family:Montserrat;
+
+}
+h2
+{
+	color:white;
+	font-family:Montserrat;
+}
+h3
+{
+	color:#B7B7B9;
+	font-family:Montserrat;
+}
+.btn-primary
+{
+	background-color: #00c8aa;
+	border-color:#00c8aa;
+}
